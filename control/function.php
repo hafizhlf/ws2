@@ -54,7 +54,7 @@
     }
 
     function chPassword($password, $nPassword, $conn) {
-        $username = $_SESSION['username'];
+        $username = $_SESSION['username'];  
         $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
         $result = $conn->query($sql);
         if ($result->num_rows == 1) {
