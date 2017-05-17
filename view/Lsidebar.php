@@ -32,11 +32,11 @@
                         	<li class="text-muted menu-title">Navigation</li>
 
                             <li>
-                                <a href="index.php" class="waves-effect active"><i class="zmdi zmdi-view-dashboard"></i> <span> Dashboard </span> </a>
+                                <a href="index.php" class="waves-effect <?php echo activePage('',"$page"); ?>"><i class="zmdi zmdi-view-dashboard"></i> <span> Dashboard </span> </a>
                             </li>
 
                             <li>
-                                <a href="index.php?page=manageItem" class="waves-effect active"><i class="zmdi zmdi-layers"></i> <span> Manage Item </span> </a>
+                                <a href="index.php?page=manageItem" class="waves-effect <?php echo activePage('manageItem',"$page"); ?>"><i class="zmdi zmdi-layers"></i> <span> Manage Item </span> </a>
                             </li>
 
                             <li>

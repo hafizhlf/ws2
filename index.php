@@ -23,15 +23,15 @@
             ?>
 
             <?php
-                include_once ("view/Lsidebar.php");
-            ?>
-
-            <?php
                 if (!isset($_GET['page'])){
                     $page ="";
                 } else {
                     $page = $_GET['page'];
                 }
+                include_once ("view/Lsidebar.php");
+            ?>
+
+            <?php
                 include_once (getPage($page));
             ?>
 
