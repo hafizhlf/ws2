@@ -16,7 +16,6 @@
         } else {
             return false;
         }
-        $conn->close();
     }
 
     function logged(){
@@ -42,7 +41,6 @@
             $thumb = $row[5];
             return array ($fName, $lName, $username, $thumb);
         }
-        $conn->close();
     }
 
     function getPage($page) {
@@ -65,5 +63,4 @@
             return false;
         }
     }
-    $conn->close();
 ?>
