@@ -6,13 +6,21 @@
         die("Koneksi gagal: " . $conn->connect_error);
     }
 
+    $options = [
+        'cost' => 12,
+    ];
+
     function login($username, $password, $conn) {
-        $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+        $sql = "SELECT * FROM user WHERE username = '$username'";
         $result = $conn->query($sql);
         if($result->num_rows == 1) {
             $row = $result->fetch_row();
-            $_SESSION['username'] = $row[3];
-            return true;
+            if (password_verify($password, $row[4])) {
+                $_SESSION['username'] = $row[3];
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
@@ -47,15 +55,17 @@
         if (empty($page)){
             return "view/dashboard.php";
         } else {
-            return 'view/$page.php';
+            return "view/$page.php";
         }
     }
 
-    function chPassword($password, $nPassword, $conn) {
-        $username = $_SESSION['username'];  
-        $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+    function chPassword($password, $nPassword, $conn, $options) {
+        $username = $_SESSION['username'];
+        $sql = "SELECT * FROM user WHERE username='$username'";
         $result = $conn->query($sql);
-        if ($result->num_rows == 1) {
+        $row = $result->fetch_row();
+        if (password_verify($password, $row[4])) {
+            $nPassword = password_hash($nPassword, PASSWORD_BCRYPT, $options);
             $sql = "UPDATE user SET password = '$nPassword' WHERE username='$username'";
             $conn->query($sql);
             return true;

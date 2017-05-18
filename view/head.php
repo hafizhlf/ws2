@@ -17,6 +17,10 @@
         <!-- Custom box css -->
         <link href="assets/plugins/custombox/dist/custombox.min.css" rel="stylesheet">
 
+        <!-- Editatable  Css-->
+        <link rel="stylesheet" href="assets/plugins/magnific-popup/dist/magnific-popup.css" />
+        <link rel="stylesheet" href="assets/plugins/jquery-datatables-editable/datatables.css" />
+
         <!-- App css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />

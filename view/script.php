@@ -19,6 +19,15 @@
         <![endif]-->
         <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
 
+        <!-- Editable js -->
+	    <script src="assets/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+	    <script src="assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
+	    <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
+	    <script src="assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
+	    <script src="assets/plugins/tiny-editable/numeric-input-example.js"></script>
+		<!-- init -->
+	    <script src="assets/pages/datatables.editable.init.js"></script>
+
         <!--Morris Chart-->
 		<script src="assets/plugins/morris/morris.min.js"></script>
 		<script src="assets/plugins/raphael/raphael-min.js"></script>
@@ -46,6 +55,9 @@
                     data: chg.serialize(),
                     success: function (data) {
                         if(data=='berhasil'){
+                            document.getElementById('field-3').value = "";
+                            document.getElementById('field-2').value = "";
+                            document.getElementById('field-1').value = "";
                             toastr["success"]("Ganti password berhasil!");
                             toastr.options = {
                                 "closeButton": true,
@@ -108,3 +120,7 @@
                 e.preventDefault();
             });
         </script>
+
+        <script>
+			$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+		</script>

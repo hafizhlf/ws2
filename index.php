@@ -13,6 +13,7 @@
             } else {
                 header("Location: login.php");
             }
+            include_once ("control/helper.php");
         ?>
 
         <!-- Begin page -->
