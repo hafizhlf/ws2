@@ -77,8 +77,6 @@
     function activePage($page, $aPage){
         if ($page == $aPage) {
             return "active";
-        } else {
-            return "coba";
         }
     }
 ?>
