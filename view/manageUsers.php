@@ -4,83 +4,8 @@
             <div class="content-page">
                 <!-- Start content -->
                 <div class="content">
+                
                     <div class="container">
-
-						<div class="row">
-                            <div class="col-sm-12">
-                                <div class="card-box">
-									<div class="dropdown pull-right">
-                                        <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
-                                            <i class="zmdi zmdi-more-vert"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-
-                        			<h4 class="header-title m-t-0 m-b-30">Inline Editor</h4>
-
-                                    <div class="table-responsive">
-                                        <table id="mainTable" class="table table-striped m-b-0">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Cost</th>
-                                                    <th>Profit</th>
-                                                    <th>Fun</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Car</td>
-                                                    <td>100</td>
-                                                    <td>200</td>
-                                                    <td>0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Bike</td>
-                                                    <td>330</td>
-                                                    <td>240</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Plane</td>
-                                                    <td>430</td>
-                                                    <td>540</td>
-                                                    <td>3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Yacht</td>
-                                                    <td>100</td>
-                                                    <td>200</td>
-                                                    <td>0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Segway</td>
-                                                    <td>330</td>
-                                                    <td>240</td>
-                                                    <td>1</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <th><strong>TOTAL</strong></th>
-                                                    <th></th>
-                                                    <th></th>
-                                                    <th></th>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div><!-- end col -->
-                        </div>
-                        <!-- end row -->
-
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="panel">

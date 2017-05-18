@@ -18,7 +18,7 @@
                                 </button>
                             </li>
                             <li>
-                                <h4 class="page-title">Dashboard</h4>
+                                <h4 class="page-title" id="bigTitle"></h4>
                             </li>
                         </ul>
 

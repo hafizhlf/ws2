@@ -32,8 +32,15 @@
 		<script src="assets/plugins/morris/morris.min.js"></script>
 		<script src="assets/plugins/raphael/raphael-min.js"></script>
 
+
+        <?php
+            if (!isset($_GET['page'])) {
+        ?>
         <!-- Dashboard init -->
         <script src="assets/pages/jquery.dashboard.js"></script>
+        <?php
+            }
+        ?>
 
         <!-- Modal-Effect -->
         <script src="assets/plugins/custombox/dist/custombox.min.js"></script>
@@ -124,3 +131,12 @@
         <script>
 			$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
 		</script>
+
+        <script>
+            if(document.getElementById("active") != null){
+                var x = document.getElementById("active");
+                document.getElementById("bigTitle").innerHTML = x.innerHTML;
+            } else {
+                document.getElementById("bigTitle").innerHTML = " Dashboard";
+            }
+        </script>
