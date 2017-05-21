@@ -9,18 +9,6 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-box table-responsive">
-                                    <div class="dropdown pull-right">
-                                        <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
-                                            <i class="zmdi zmdi-more-vert"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
 
                                     <div class="m-b-30">
                         			    <button type="button" class="btn btn-primary btn-trans btn-rounded w-md waves-effect waves-primary">Add <i class="fa fa-plus"></i></button>
