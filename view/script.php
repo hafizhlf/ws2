@@ -18,13 +18,7 @@
         <script type="text/javascript" src="assets/plugins/jquery-knob/excanvas.js"></script>
         <![endif]-->
         <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
-
-        <!-- Editable js -->
-	    <script src="assets/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-	    <script src="assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
-	    <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
-	    <script src="assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
-	    <script src="assets/plugins/tiny-editable/numeric-input-example.js"></script>
+        
 		<!-- init -->
 	    <script src="assets/pages/datatables.editable.init.js"></script>
 
@@ -46,12 +40,43 @@
         <script src="assets/plugins/custombox/dist/custombox.min.js"></script>
         <script src="assets/plugins/custombox/dist/legacy.min.js"></script>
 
+        <!-- Datatables-->
+        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
+        <script src="assets/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="assets/plugins/datatables/buttons.bootstrap.min.js"></script>
+        <script src="assets/plugins/datatables/jszip.min.js"></script>
+        <script src="assets/plugins/datatables/pdfmake.min.js"></script>
+        <script src="assets/plugins/datatables/vfs_fonts.js"></script>
+        <script src="assets/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="assets/plugins/datatables/buttons.print.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.fixedHeader.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.keyTable.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="assets/plugins/datatables/responsive.bootstrap.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.scroller.min.js"></script>
+
+        <!-- Datatable init js -->
+        <script src="assets/pages/datatables.init.js"></script>
+
         <!-- App js -->
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
 
         <!-- Toastr js -->
         <script src="assets/plugins/toastr/toastr.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#datatable').dataTable();
+                $('#datatable-keytable').DataTable( { keys: true } );
+                $('#datatable-responsive').DataTable();
+                $('#datatable-scroller').DataTable( { ajax: "assets/plugins/datatables/json/scroller-demo.json", deferRender: true, scrollY: 380, scrollCollapse: true, scroller: true } );
+                var table = $('#datatable-fixed-header').DataTable( { fixedHeader: true } );
+            } );
+            TableManageButtons.init();
+
+        </script>
 
         <script>
             var chg = $('#passcForm');
@@ -127,10 +152,6 @@
                 e.preventDefault();
             });
         </script>
-
-        <script>
-			$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
-		</script>
 
         <script>
             if(document.getElementById("active") != null){

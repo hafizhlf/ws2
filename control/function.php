@@ -79,4 +79,15 @@
             return "active";
         }
     }
+
+    function getAllUser($conn){
+        $i = 0;
+        $sql = "SELECT * FROM user";
+        $result = $conn->query($sql);
+        while($query = $result->fetch_row()){
+            $return[$i] = $query;
+            $i++;
+        }
+        return $return;
+    }
 ?>
